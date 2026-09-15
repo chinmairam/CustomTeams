@@ -1,0 +1,191 @@
+<template>
+    <!-- Logger Component for Nebula Logger Integration -->
+    <nebula-logger></nebula-logger>
+    
+    <div class="card-container slds-scrollable_none slds-border_top slds-border_left slds-border_right slds-border_bottom">
+        <div class="card-header slds-theme_shade slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-custom-object team-icon-background">
+                        <lightning-icon icon-name="standard:team_member" size="small" alternative-text="CustomTeams"></lightning-icon>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="card-header-title slds-text-body_regular">
+                        <a 
+                        href="javascript:void(0);" 
+                        class="slds-card__header-link slds-truncate" 
+                        title={cardTitle}>
+                            <span>{cardTitle}</span>
+                        </a>
+                    </h2>
+                </div>
+            </header>
+            
+            <div class="slds-no-flex">
+                <lightning-button
+                    label="New"
+                    onclick={handleAddNew}
+                ></lightning-button>
+            </div>
+        </div>
+
+        <div>
+            <template if:true={isLoading}>
+                <div class="slds-var-p-around_medium">
+                    <lightning-spinner
+                        alternative-text="Loading..."
+                        size="medium"
+                        variant="brand">
+                    </lightning-spinner>
+                </div>
+            </template>
+
+            <template if:true={hasTeamMembers}>
+                <lightning-datatable
+                    key-field="id"
+                    data={teamMembers}
+                    columns={columns}
+                    onrowaction={handleRowAction}
+                    default-sort-direction={defaultSortDirection}
+                    sorted-direction={sortDirection}
+                    sorted-by={sortedBy}
+                    onsort={onHandleSort}
+                    hide-checkbox-column
+                ></lightning-datatable>
+            </template>
+            
+            <template if:false={hasTeamMembers}>
+                <div class="slds-text-align_center slds-var-p-around_medium">
+                    <p class="slds-text-color_weak">{labels.NO_TEAM_MEMBERS_MSG}</p>
+                </div>
+            </template>
+        </div>
+
+        <!-- Add Team Member Modal -->
+        <template if:true={showAddModal}>
+            <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" aria-label="Close" title="Close" onclick={handleCancelAdd}>
+                            <lightning-icon icon-name="utility:close" size="small" aria-hidden="true"></lightning-icon>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 class="slds-modal__title slds-hyphenate">{labels.NEW_CUSTOM_TEAM}</h2>
+                    </header>
+                    <div class="slds-modal__content slds-var-p-around_medium">
+                        <lightning-record-edit-form
+                            object-api-name={customTeamObject}
+                            onsubmit={handleSaveAdd}
+                            onsuccess={handleAddSuccess}
+                            onerror={handleAddError}>
+                            
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning-input-field
+                                        field-name={teamMemberField}
+                                        required>
+                                    </lightning-input-field>
+                                    
+                                    <lightning-input-field
+                                        field-name={teamRoleField}
+                                        required>
+                                    </lightning-input-field>
+                                </div>
+
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning-input-field
+                                        field-name={accessLevelField}
+                                        required>
+                                    </lightning-input-field>
+                                    <div class="slds-form-element slds-form-element_stacked">
+                                        <label class="slds-form-element__label">Owner</label>
+                                        <div class="slds-form-element__control">
+                                            <div class="slds-form-element__static">{parentOwnerName}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-var-m-top_medium">
+                                <lightning-button 
+                                    label="Cancel" 
+                                    onclick={handleCancelAdd}
+                                    class="slds-var-m-right_small">
+                                </lightning-button>
+                                <lightning-button 
+                                    type="submit" 
+                                    label="Save" 
+                                    variant="brand">
+                                </lightning-button>
+                            </div>
+                        </lightning-record-edit-form>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+
+        <!-- Edit Team Member Modal -->
+        <template if:true={showEditModal}>
+            <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" aria-label="Close" title="Close" onclick={handleCancelEdit}>
+                            <lightning-icon icon-name="utility:close" size="small" aria-hidden="true"></lightning-icon>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 class="slds-modal__title slds-hyphenate">{labels.EDIT_CUSTOM_TEAM}</h2>
+                    </header>
+                    <div class="slds-modal__content slds-var-p-around_medium">
+                        <lightning-record-edit-form
+                            record-id={editingTeamId}
+                            object-api-name={customTeamObject}
+                            onsuccess={handleEditSuccess}
+                            onerror={handleEditError}>
+                            
+                            <!-- <lightning-messages></lightning-messages> -->
+
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning-input-field
+                                        field-name={teamMemberField}
+                                        required>
+                                    </lightning-input-field>
+                                    
+                                    <lightning-input-field
+                                        field-name={teamRoleField}
+                                        required>
+                                    </lightning-input-field>
+                                </div>
+
+                                <div class="slds-col slds-size_1-of-2">
+                                    <lightning-input-field
+                                        field-name={accessLevelField}
+                                        required>
+                                    </lightning-input-field>
+                                    <lightning-output-field
+                                        field-name={ownerField}>
+                                    </lightning-output-field>
+                                </div>
+                            </div>
+                            
+                            <div class="slds-var-m-top_medium">
+                                <lightning-button 
+                                    label="Cancel" 
+                                    onclick={handleCancelEdit}
+                                    class="slds-var-m-right_small">
+                                </lightning-button>
+                                <lightning-button 
+                                    type="submit" 
+                                    label="Save"
+                                    variant="brand">
+                                </lightning-button>
+                            </div>
+                        </lightning-record-edit-form>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+    </div>
+</template>

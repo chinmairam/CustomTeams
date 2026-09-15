@@ -1,0 +1,19 @@
+.card-container {
+    border-radius: var(--lwc-borderRadiusMedium);
+}
+
+.card-header {
+    padding: var(--lwc-varSpacingMedium) var(--lwc-varSpacingMedium);
+    border-bottom: var(--lwc-borderWidthThin) solid var(--slds-g-color-border-base-1, #e5e5e5);
+    background-color: var(--slds-g-color-neutral-base-95, #f3f3f3);
+}
+
+.card-header-title span {
+    font-weight: var(--lwc-fontWeightBold);
+    font-size: var(--slds-c-card-heading-font-size, var(--sds-c-card-heading-font-size, 0.9rem));
+}
+
+.team-icon-background {
+    background-color: #696e71;
+    border-radius: var(--lwc-borderRadiusMedium);
+}

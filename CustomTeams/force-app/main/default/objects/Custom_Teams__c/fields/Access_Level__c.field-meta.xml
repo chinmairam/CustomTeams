@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Access_Level__c</fullName>
+    <description>Defines the level of access the team member has to the related record</description>
+    <inlineHelpText>Select the sharing permission level for this team member. &apos;Read&apos; gives view-only access, while &apos;Edit&apos; allows viewing and modifying the record.</inlineHelpText>
+    <label>Access Level</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Read</fullName>
+                <default>false</default>
+                <label>Read</label>
+            </value>
+            <value>
+                <fullName>Edit</fullName>
+                <default>false</default>
+                <label>Edit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

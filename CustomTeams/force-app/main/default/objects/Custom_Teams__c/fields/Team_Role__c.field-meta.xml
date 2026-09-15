@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Team_Role__c</fullName>
+    <description>Stores the functional role of the team member.</description>
+    <inlineHelpText>Select the functional role assigned to this team member.</inlineHelpText>
+    <label>Team Role</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Product Owner</fullName>
+                <default>false</default>
+                <label>Product Owner</label>
+            </value>
+            <value>
+                <fullName>Supporter</fullName>
+                <default>false</default>
+                <label>Supporter</label>
+            </value>
+            <value>
+                <fullName>Executive/Coordinator</fullName>
+                <default>false</default>
+                <label>Executive/Coordinator</label>
+            </value>
+            <value>
+                <fullName>Account Manager</fullName>
+                <default>false</default>
+                <label>Account Manager</label>
+            </value>
+            <value>
+                <fullName>Channel Manager</fullName>
+                <default>false</default>
+                <label>Channel Manager</label>
+            </value>
+            <value>
+                <fullName>Sales Manager</fullName>
+                <default>false</default>
+                <label>Sales Manager</label>
+            </value>
+            <value>
+                <fullName>Executive Sponsor</fullName>
+                <default>false</default>
+                <label>Executive Sponsor</label>
+            </value>
+            <value>
+                <fullName>Lead Qualifier</fullName>
+                <default>false</default>
+                <label>Lead Qualifier</label>
+            </value>
+            <value>
+                <fullName>Pre-Sales Consultant</fullName>
+                <default>false</default>
+                <label>Pre-Sales Consultant</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

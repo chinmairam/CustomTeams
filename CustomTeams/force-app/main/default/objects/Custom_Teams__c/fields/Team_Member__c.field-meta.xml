@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Team_Member__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Stores the user who is added as part of the team.</description>
+    <inlineHelpText>Select the user you want to add as a team member. Access will be granted automatically based on the selected Access Level.</inlineHelpText>
+    <label>Team Member</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>CustomTeams</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

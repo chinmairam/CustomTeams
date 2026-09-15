@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+   <labels>
+       <fullName>ACCESS_LEVEL</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>ACCESS LEVEL</shortDescription>
+       <value>Access Level</value>
+   </labels>
+   <labels>
+       <fullName>CUSTOM_TEAMS</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>CUSTOM TEAMS</shortDescription>
+       <value>Custom Teams</value>
+   </labels>
+   <labels>
+       <fullName>DELETE_NOTIFY_BODY</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>DELETE NOTIFY BODY</shortDescription>
+       <value>You have been removed from</value>
+   </labels>
+   <labels>
+       <fullName>DELETE_NOTIFY_SUBJECT</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>DELETE NOTIFY SUBJECT</shortDescription>
+       <value>Member Removed</value>
+   </labels>
+   <labels>
+       <fullName>DUPLICATE_CUSTOM_TEAM</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>DUPLICATE CUSTOM TEAM</shortDescription>
+       <value>Duplicate Custom Team record:</value>
+   </labels>
+   <labels>
+       <fullName>EDIT_CUSTOM_TEAM</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>EDIT CUSTOM TEAM</shortDescription>
+       <value>Edit Team Member</value>
+   </labels>
+  <labels>
+       <fullName>ERROR_ADDING_TEAM_MEBER</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>ERROR ADDING TEAM MEBER</shortDescription>
+       <value>Error adding team member</value>
+   </labels>
+   <labels>
+       <fullName>ERROR_EDITING_TEAM_MEMBER</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>ERROR EDITING TEAM MEMBER</shortDescription>
+       <value>Error editing team member</value>
+   </labels>
+   <labels>
+       <fullName>ERROR_FETCHING_ACCESS_LEVELS</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>ERROR FETCHING ACCESS LEVELS</shortDescription>
+       <value>Error fetching Access Levels</value>
+   </labels>
+   <labels>
+       <fullName>ERROR_FETCHING_OBJ_INFO</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>ERROR FETCHING OBJ INFO</shortDescription>
+       <value>Error fetching object info</value>
+   </labels>
+   <labels>
+       <fullName>ERROR_FETCHING_TEAM_ROLES</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>ERROR FETCHING TEAM ROLES</shortDescription>
+       <value>Error fetching Team Roles</value>
+   </labels>
+   <labels>
+       <fullName>ERROR_LOADING_MEMBERS</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>ERROR LOADING MEMBERS</shortDescription>
+       <value>Error loading team members</value>
+   </labels>
+   <labels>
+       <fullName>ERROR_REMOVING_TEAM_MEMBERS</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>ERROR REMOVING TEAM MEMBERS</shortDescription>
+       <value>Error removing one or more team members:</value>
+   </labels>
+   <labels>
+       <fullName>ERROR_TEAM_MANAGE_INSUFFICIENT_ACCESS</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>ERROR TEAM MANAGE INSUFFICIENT ACCESS</shortDescription>
+       <value>You do not have permission to manage team members for this record.</value>
+   </labels>
+   <labels>
+       <fullName>ERROR_TEAM_MEMBER_DELETE</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>ERROR TEAM MEMBER DELETE</shortDescription>
+       <value>Error deleting team member</value>
+   </labels>
+   <labels>
+       <fullName>ERROR_VALIDATING_PERMISSIONS</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>ERROR VALIDATING PERMISSIONS</shortDescription>
+       <value>Error validating permissions:</value>
+   </labels>
+   <labels>
+       <fullName>INFO_MEMBER_ACCESS_END</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>INFO MEMBER ACCESS END</shortDescription>
+       <value>access level for this record.</value>
+   </labels>
+   <labels>
+       <fullName>INFO_MEMBER_ACCESS_START</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>INFO MEMBER ACCESS START</shortDescription>
+       <value>This Team Member already has</value>
+   </labels>
+   <labels>
+       <fullName>INSERT_EMAIL_BODY</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>INSERT EMAIL BODY</shortDescription>
+       <value>You have been added to a Custom Team of</value>
+   </labels>
+   <labels>
+       <fullName>INSERT_EMAIL_SUBJECT</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>INSERT EMAIL SUBJECT</shortDescription>
+       <value>New member is added into</value>
+   </labels>
+   <labels>
+       <fullName>INSERT_NOTIFY_BODY</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>INSERT NOTIFY BODY</shortDescription>
+       <value>You have been added to a Custom Team of</value>
+   </labels>
+   <labels>
+       <fullName>INSERT_NOTIFY_SUBJECT</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>INSERT NOTIFY SUBJECT</shortDescription>
+       <value>New member added</value>
+   </labels>
+   <labels>
+       <fullName>NEW_CUSTOM_TEAM</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>NEW CUSTOM TEAM</shortDescription>
+       <value>New Custom Teams</value>
+   </labels>
+   <labels>
+       <fullName>NO_CUSTOM_TEAMS_FOUND</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>NO CUSTOM TEAMS FOUND</shortDescription>
+       <value>No Custom Team records found for the provided IDs.</value>
+   </labels>
+   <labels>
+       <fullName>NO_CUSTOM_TEAM_DELETE_ACCESS</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>NO CUSTOM TEAM DELETE ACCESS</shortDescription>
+       <value>You do not have permission to delete team members.</value>
+   </labels>
+   <labels>
+       <fullName>NO_TEAM_MEMBERS</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>NO TEAM MEMBERS</shortDescription>
+       <value>No team members found. Click &quot;New&quot; to start adding team members.</value>
+   </labels>
+   <labels>
+       <fullName>TEAM_MEMBER</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>TEAM MEMBER</shortDescription>
+       <value>Team Member</value>
+   </labels>
+   <labels>
+       <fullName>TEAM_MEMBER_ADDED_SUCCESS</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>TEAM MEMBER ADDED SUCCESS</shortDescription>
+       <value>Team Member added successfully.</value>
+   </labels>
+   <labels>
+       <fullName>TEAM_MEMBER_DELETE_PROMPT</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>TEAM MEMBER DELETE PROMPT</shortDescription>
+       <value>Are you sure you want to remove this team member?</value>
+   </labels>
+   <labels>
+       <fullName>TEAM_MEMBER_DELETE_SUCCESS</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>TEAM MEMBER DELETE SUCCESS</shortDescription>
+       <value>Team Member deleted successfully.</value>
+   </labels>
+   <labels>
+       <fullName>TEAM_MEMBER_UPDATE_SUCCESS</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>TEAM MEMBER UPDATE SUCCESS</shortDescription>
+       <value>Team Member updated successfully.</value>
+   </labels>
+   <labels>
+       <fullName>TEAM_ROLE</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>TEAM ROLE</shortDescription>
+       <value>Team Role</value>
+   </labels>
+   <labels>
+       <fullName>UPDATE_NOTIFY_BODY_1</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>UPDATE NOTIFY BODY 1</shortDescription>
+       <value>Your permission in</value>
+   </labels>
+   <labels>
+       <fullName>UPDATE_NOTIFY_BODY_2</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>UPDATE NOTIFY BODY 2</shortDescription>
+       <value>changed to</value>
+   </labels>
+   <labels>
+       <fullName>UPDATE_NOTIFY_SUBJECT</fullName>
+       <categories>Custom Teams</categories>
+       <language>en_US</language>
+       <protected>false</protected>
+       <shortDescription>UPDATE NOTIFY SUBJECT</shortDescription>
+       <value>Permission Changed</value>
+   </labels>
+</CustomLabels>

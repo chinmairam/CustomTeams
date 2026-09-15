@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>CustomTeamRelatedListController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <description>This Permission Set provides access to fields in the Custom Teams Object.</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Custom_Teams__c.Access_Level__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Custom_Teams__c.Active__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Custom_Teams__c.Criteria__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Custom_Teams__c.Object_API_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Custom_Teams__c.Related_Record_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Custom_Teams__c.Team_Member__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Custom_Teams__c.Team_Role__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Custom Teams Field Level Security PS</label>
+</PermissionSet>
